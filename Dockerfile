@@ -1,8 +1,8 @@
 FROM node:lts-alpine AS build-stage
 
 # make the 'frontend' folder the current working directory
-WORKDIR /frontend
-COPY frontend/. .
+WORKDIR /vue-app
+COPY vue-app/. .
 
 ENV VUE_APP_BASE_URL=<your_url_here>
 
