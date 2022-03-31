@@ -13,7 +13,10 @@
         alias vue='winpty vue.cmd'
     ```
 
-- Note -
+- Note - to generate a new Vue app using the Vue CLI (if prompted
+for preset by the CLI, choose default): `vue create <app-name>`
+    - a folder labeled `<app-name>` will be generated containing the Vue skeleton
+    - Beyond the default options, more node modules can be installed that typically complement Vue.js
 
 
 ## Starting the app ##
@@ -145,10 +148,3 @@ of your Heroku app in the url and tag name:
    ```bash=3
    docker push registry.heroku.com/{NAME_OF_HEROKU_APP}/web
    ```
-
-
-
-## Notes ##
-- to generate a new Vue app using the Vue CLI (if prompted
-for preset by the CLI, choose default): `vue create <app-name>`
-    - The other options allow for quick installation of modules if needed
