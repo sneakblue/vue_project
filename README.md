@@ -1,5 +1,4 @@
-# Vue.js walkthrough from scratch #
-### (With Flask backend) ###
+# Vue.js w/ Flask #
 
 ## Install Vue CLI ##
 1. Install the vue CLI globally using the following command:
@@ -14,7 +13,7 @@
         alias vue='winpty vue.cmd'
     ```
 
-- Note - 
+- Note -
 
 
 ## Starting the app ##
