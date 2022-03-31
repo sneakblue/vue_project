@@ -13,4 +13,3 @@
 ## Notes ##
 - to generate a new Vue app using the Vue CLI (if prompted
 for preset by the CLI, choose default): `vue create <app-name>`
-> Must add `alias vue='winpty vue.cmd'` to .bashrc file to use command
