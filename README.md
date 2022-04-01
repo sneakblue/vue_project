@@ -22,8 +22,8 @@ for preset by the CLI, choose default): `vue create <app-name>`
 
 ### Pinia Notes ###
 - Each "slice of state" is referred to here as "stores"
-- actions === thunks - allows for use of async functions as well as params to be passed in
-- getters === actions (sorta) - since there is no need to declare an action-switch case, getters are more functions to call to make specific updates to the stores
+- actions === thunks - allows for use of async functions as well as params to be passed in. It is also possible to update the state inside of an action, making the reason to call a getter while fetching from the backend redundant
+- getters == actions & reducer switch case rolled into one! - since there is no need to declare an action-switch case, getters are more functions to call to make specific updates to the stores. In use if you only want to modify the existing store
 
 
 # Vue Docs #
