@@ -1,18 +1,37 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/Navigation/NavBar.vue'
+
+// const routes = {
+//     '/': HomePage
+// }
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+    // data() {
+    //     return {
+    //         currentPath: window.location.hash
+    //     }
+    // },
+    // computed: {
+    //     currentView() {
+    //         return routes[this.currentPath.slice(1) || '/'] || NotFound
+    //     }
+    // },
+    name: 'App',
+    components: {
+      NavBar
   }
 }
 </script>
+
+
+<template>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <NavBar />
+</template>
+
 
 <style>
 #app {
