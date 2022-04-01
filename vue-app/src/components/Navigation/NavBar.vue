@@ -1,13 +1,14 @@
 <script>
-import useSessionStore from '../../stores/session.js'
+// import useSessionStore from '../../stores/session.js'
 
 
 export default {
-    setup() {
-        const sessionStore = useSessionStore()
+    // addition of store for use in component
+    // setup() {
+    //     const sessionStore = useSessionStore()
 
-        return { sessionStore }
-    },
+    //     return { sessionStore }
+    // },
     name: 'NavBar',
     props: {
         userName: String,
