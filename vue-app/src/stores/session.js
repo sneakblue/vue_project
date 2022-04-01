@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 
 const useSessionStore = defineStore('sessionStore', {
+    // setting of initial state
     state: () => ({
         user: null,
     }),
