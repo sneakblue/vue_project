@@ -19,6 +19,20 @@ for preset by the CLI, choose default): `vue create <app-name>`
     - Beyond the default options, more node modules can be installed that typically complement Vue.js
 
 
+
+### Pinia Notes ###
+- Each "slice of state" is referred to here as "stores"
+- actions === thunks - allows for use of async functions as well as params to be passed in
+- getters === actions (sorta) - since there is no need to declare an action-switch case, getters are more functions to call to make specific updates to the stores
+
+
+# Vue Docs #
+- Vue - https://vuejs.org/
+- Vue CLI - https://cli.vuejs.org/
+- Pinia - https://pinia.vuejs.org/
+- Vue Router - https://router.vuejs.org/
+
+
 ## Starting the app ##
 
 1. Install dependencies
