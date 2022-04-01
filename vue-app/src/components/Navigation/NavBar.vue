@@ -9,10 +9,10 @@ export default {
 
     //     return { sessionStore }
     // },
-    name: 'NavBar',
-    props: {
-        userName: String,
-    }
+    // name: 'NavBar',
+    // props: {
+    //     userName: String,
+    // }
 }
 </script>
 
