@@ -1,9 +1,8 @@
-<script>
+<script setup name='HomePage'>
 
-export default {
-    name: 'HomePage',
-}
-
+// export default {
+//     name: 'HomePage',
+// }
 </script>
 
 

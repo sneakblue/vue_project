@@ -4,7 +4,7 @@ const appStore = {};
 
 // Register app status Library
 export const registerStore = () => {
-    appStore['sessionStore'] = useSessionStore();
+    appStore['useSessionStore'] = useSessionStore();
 };
 
 export default appStore;

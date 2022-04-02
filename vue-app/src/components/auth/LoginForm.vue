@@ -1,7 +1,8 @@
-<script>
-export default {
-    name: 'LoginForm',
-}
+<script setup name='LoginForm'>
+import appStore from '../../stores/index.js'
+
+const sessionStore = appStore.useSessionStore;
+console.log(sessionStore.user);
 </script>
 
 <template>
