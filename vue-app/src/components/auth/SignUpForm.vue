@@ -1,9 +1,9 @@
 <script>
 export default {
-    name: 'LoginForm',
+    name: 'SignUpForm'
 }
 </script>
 
 <template>
-    <h4>Login Form Loaded</h4>
+    <h4>Signup Form Loaded</h4>
 </template>

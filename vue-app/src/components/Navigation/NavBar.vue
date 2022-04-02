@@ -9,7 +9,7 @@ export default {
 
     //     return { sessionStore }
     // },
-    // name: 'NavBar',
+    name: 'NavBar',
     // props: {
     //     userName: String,
     // }
@@ -17,7 +17,9 @@ export default {
 </script>
 
 <template>
-    <div>
-        <h2>Inside NavBar</h2>
-    </div>
+    <nav>
+        <router-link class='nav-item' to='/'>Home</router-link>
+        <router-link class='nav-item' to='/login'>Login</router-link>
+        <router-link class='nav-item' to='/sign-up'>Sign Up</router-link>
+    </nav>
 </template>
