@@ -19,15 +19,20 @@ export const router = createRouter({
         {
             path: '/login',
             component: LoginForm,
-            // beforeEnter: () => {
-            //     const sessionStore = useSessionStore();
-            //     sessionStore.authenticate();
-            //     if (sessionStore.user) return '/'
-            // }
+            beforeEnter: () => {
+                const sessionStore = appStore.useSessionStore;
+                sessionStore.authenticate();
+                if (sessionStore.user) return '/'
+            }
         },
         {
             path: '/sign-up',
             component: SignUpForm,
+            beforeEnter: () => {
+                const sessionStore = appStore.useSessionStore;
+                sessionStore.authenticate();
+                if (sessionStore.user) return '/'
+            }
         }
     ],
 })
