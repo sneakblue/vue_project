@@ -1,19 +1,17 @@
 <script setup name='SignUpForm'>
-// import appStore from '../../stores/index.js'
-// import { onMounted } from 'vue'
-// import { storeToRefs } from 'pinia'
+import appStore from '../../stores/index.js'
+import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
+import { watch } from 'vue'
 
-// const { user } = storeToRefs(appStore.useSessionStore);
-// console.log('Hey!!');
-// const sessionStore = appStore.useSessionStore;
-// console.log(user)
-// onMounted(() => {
-//     console.log('SignUp Form mounted');
-// })
+const sessionStore = appStore.useSessionStore;
+const router = useRouter();
+const { user } = storeToRefs(sessionStore);
 
-// export default {
-//     name: 'SignUpForm'
-// }
+watch(user, (curr) => {
+    if (curr) router.push('/');
+})
+
 </script>
 
 <template>

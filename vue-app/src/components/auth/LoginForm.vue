@@ -1,31 +1,28 @@
 <script setup name='LoginForm'>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { storeToRefs } from 'pinia'
 import appStore from '../../stores/index.js'
 
 const sessionStore = appStore.useSessionStore;
-console.log(sessionStore.user);
+const router = useRouter();
+const { user } = storeToRefs(sessionStore);
 
 const email = ref('');
 const password = ref('');
 
+watch(user, (curr) => {
+    if (curr) router.push('/')
+})
+
 const handleLogin = async () => {
-    console.log(email);
-    console.log(password);
     await sessionStore.login(email.value, password.value);
-    if (sessionStore.user) {
-        this.router.push('/');
+    if (user.value) {
+        router.push('/');
     }
 }
-
-// const updateEmail = (event) => {
-//     email = event.target.value;
-// }
-
-// const updatePassword = (event) => {
-//     password = event.target.value;
-// }
-
 </script>
+
 
 <template>
     <div>
@@ -34,7 +31,7 @@ const handleLogin = async () => {
                 v-model='email'
                 placeholder="email"
             />
-            <input type='text'
+            <input type='password'
                 v-model='password'
                 placeholder="password"
             />
