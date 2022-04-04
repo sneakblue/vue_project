@@ -27,19 +27,27 @@ const handleLogin = async () => {
 <template>
     <div>
         <form @submit.prevent='handleLogin'>
-            <input type='text'
-                v-model='email'
-                placeholder="email"
-            />
-            <input type='password'
-                v-model='password'
-                placeholder="password"
-            />
-            <button
-                type='submit'
-            >
-                Submit
-            </button>
+            <div>
+                <label for='email'>Email</label>
+                <input type='text'
+                    id='email'
+                    v-model='email'
+                    placeholder="email"
+                />
+            </div>
+            <div>
+                <label for='password'>Password</label>
+                <input type='password'
+                    id='password'
+                    v-model='password'
+                    placeholder="password"
+                />
+                <button
+                    type='submit'
+                >
+                    Submit
+                </button>
+            </div>
         </form>
     </div>
 </template>

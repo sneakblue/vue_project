@@ -1,28 +1,21 @@
 <script setup name='UserList'>
-import { ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import { onMounted } from 'vue-demi';
+import appStore from '../../stores'
 
-const users = ref([]);
+const userStore = appStore.useUserStore;
 
+const { userList } = storeToRefs(userStore);
 
-(async () => {
-    const response = await fetch('/api/users/');
-    const responseData = await response.json();
-    users.value = responseData.users;
+onMounted(() => {
+    userStore.fetchUsers();
 })
-
-
-const userComponents = users.value.map((user) => {
-    return (
-        <li key={user.id}>
-            <router-link to={`/users/${user.id}`}>{user.username}</router-link>
-        </li>
-    )
-})
-
 </script>
 
 <template>
 <div>
-    {{userComponents}}
+    <div v-for='user in userList' :key='user'>
+        <router-link :to="`/users/${user.id}`">{{user.username}}</router-link>
+    </div>
 </div>
 </template>

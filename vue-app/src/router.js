@@ -47,6 +47,7 @@ export const router = createRouter({
         },
         {
             path: '/users/:userId',
+            name: 'user',
             component: User,
             beforeEnter: () => {
                 const sessionStore = appStore.useSessionStore;
