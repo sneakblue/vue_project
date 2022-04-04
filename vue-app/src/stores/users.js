@@ -23,8 +23,6 @@ const useUserStore = defineStore('UserStore', {
             if (response.ok) {
                 const loadedUser = await response.json();
                 this.userList[loadedUser.id] = loadedUser;
-                console.log('inside fetch');
-                console.log(loadedUser);
             }
         }
     }

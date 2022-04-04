@@ -1,6 +1,6 @@
 <script setup name='User'>
-import { ref, watch } from 'vue'
 import { storeToRefs } from 'pinia'
+import { onMounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import appStore from '../../stores/index'
 
@@ -9,39 +9,29 @@ const route = useRoute();
 const userId = route.params.userId;
 const userStore = appStore.useUserStore;
 const { userList } = storeToRefs(userStore);
-const user = ref(userStore.userList[userId]);
-console.log(userList.value)
 
-if (userList) {
-    console.log('inside userlist check')
-    console.log(user);
-    user.value = userList.value[userId];
-}
-
-console.log(user.value.email);
 if (!userId) {
     router.push('/');
 }
 
-watch(userList, (curr) => {
-    console.log('inside watch')
-    user.value = curr[userId]
-    console.log(user.value);
+onMounted(() => {
+    userStore.fetchUser(userId);
 })
+
 </script>
 
 
 <template>
     <ul>
-        <div v-if='user.id === userId'>
+        <div v-if='userList'>
             <li>
-                <strong>User Id</strong> {{user.id}}
+                <strong>User Id</strong> {{userList[userId].id}}
             </li>
             <li>
-                <strong>Username</strong> {{user.username}}
+                <strong>Username</strong> {{userList[userId].username}}
             </li>
             <li>
-                <strong>Email</strong> {{user.email}}
+                <strong>Email</strong> {{userList[userId].email}}
             </li>
         </div>
     </ul>
