@@ -81,7 +81,7 @@ for preset by the CLI, choose default): `vue create <app-name>`
 
 5. run terminal command:
     ```bash
-        npm run-script serve
+        npm run serve
     ```
 
 ## Deploy to Heroku
