@@ -1,25 +1,15 @@
 
-<script>
+<script setup name='App'>
 import NavBar from './components/Navigation/NavBar.vue'
 
-
-export default {
-    name: 'App',
-    components: {
-      NavBar
-  }
-}
 </script>
 
 
 <template>
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <div>
         <NavBar />
         <router-view/>
     </div>
-
 </template>
 
 
