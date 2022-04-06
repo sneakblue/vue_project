@@ -4,7 +4,7 @@ FROM node:lts-alpine AS build-stage
 WORKDIR /vue-app
 COPY vue-app/. .
 
-ENV VUE_APP_BASE_URL=<Your-REACT_APP_BASE_URL-here>
+ENV VUE_APP_BASE_URL=https://fortestapping.herokuapp.com
 
 RUN npm install
 RUN npm run build
