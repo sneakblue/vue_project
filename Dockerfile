@@ -6,6 +6,7 @@ COPY vue-app/. .
 
 ENV VUE_APP_BASE_URL=https://fortestapping.herokuapp.com
 
+RUN npm install --quiet --global @vue/cli
 RUN npm install
 RUN npm run build
 
