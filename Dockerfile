@@ -1,10 +1,10 @@
-FROM node:lts-alpine AS build-stage
+FROM node:12 as build-stage
 
-# make the 'frontend' folder the current working directory
 WORKDIR /vue-app
 COPY vue-app/. .
 
-ENV VUE_APP_BASE_URL=https://fortestapping.herokuapp.com
+ENV PATH /vue-app/node_modules/.bin:$PATH
+ENV VUE_APP_BASE_URL=https://dd-project-test.herokuapp.com/
 
 RUN npm install
 RUN npm run build
