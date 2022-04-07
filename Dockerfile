@@ -20,7 +20,7 @@ EXPOSE 8000
 
 WORKDIR /var/www
 COPY . .
-COPY --from=build-stage /vue-app/dist/. app/static/
+COPY --from=build-stage /vue-app/dist/ app/static/
 
 RUN pip install -r requirements.txt
 RUN pip install psycopg2
